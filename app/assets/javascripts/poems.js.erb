@@ -33,7 +33,6 @@ $(document).ready(function() {
       updateScore(score);
       if (letters[count] == undefined) victory();
     } else {
-      console.log(currentLetter.charCodeAt(), e.which, e.keyCode)
       colorLetter(count, "red")
       score -= 3;
       updateScore(score);
