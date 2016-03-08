@@ -1,5 +1,15 @@
 $(document).ready(function() {
-  text = `<%= Poem.find((1..Poem.all.length).to_a.sample).text.lines.join("") %>`
+  function waitForPoem() {
+    if ($("#temp_poem")) {
+      var poem = $("#temp_poem");
+      console.log(poem)
+      text = poem.data("poem")
+    } else {
+      waitForPoem();
+    }
+  }
+
+  waitForPoem();
   var letters = text.split("")
   var count = 0;
   var score = 0;
