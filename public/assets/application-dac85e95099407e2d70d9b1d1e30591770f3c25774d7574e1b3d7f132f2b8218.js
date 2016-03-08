@@ -12341,10 +12341,7 @@ return jQuery;
 
 }).call(this);
 $(document).ready(function() {
-  text = `A ghost though invisible, still is like a place
-your sight can knock on, echoing; but here
-within this thick black pelt, your strongest gaze
-will be absorbed and utterly disappear`
+  text = `dreaming lucidly, you stupidly put a gun`
   var letters = text.split("")
   var count = 0;
   var score = 0;
@@ -12378,7 +12375,6 @@ will be absorbed and utterly disappear`
       updateScore(score);
       if (letters[count] == undefined) victory();
     } else {
-      console.log(currentLetter.charCodeAt(), e.which, e.keyCode)
       colorLetter(count, "red")
       score -= 3;
       updateScore(score);
