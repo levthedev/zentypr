@@ -1,4 +1,5 @@
 <%= content_tag :div, id: "temp_poem", data: {poem: @poem} {} %>
+<%= content_tag :div, id: "poems", data: {poems: @poems} {} %>
 <div id="main">
   <div id="editor">
     <span id="cursor">|</span>
@@ -8,4 +9,6 @@
   <br><br><br><br>
   <div id="wpm">
   </div>
+  <section class="border" id="next">
+  </section>
 </div>

@@ -14,27 +14,61 @@
  *= require_self
  */
 
- #main {
-     float: left;
-     width: 100%;
-     font-family: courier;
- }
+#main {
+  float: left;
+  width: 100%;
+  font-family: courier;
+}
 
- #editor {
-   margin-top: 3em;
-   text-align: center;
-   font-size: 2em;
- }
+#editor {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2em;
+}
 
- #score, #wpm {
-     position: fixed;
-     z-index: 10;
-     height: 3em;
-     padding-top: 1em;
-     margin: auto;
-     width: 100%;
-     text-align: center;
-     font-size: 3em;
-     font-family: helvetica;
-     font-weight: 100;
- }
+#score, #wpm, #next {
+  position: fixed;
+  z-index: 10;
+  height: 3em;
+  padding-top: 1em;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  font-family: helvetica;
+  font-weight: 100;
+}
+
+#editor > p {
+  display: none;
+}
+
+button {
+  margin-top: 2em;
+  font-size: 36px;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+section.border button {
+  color: black;
+  background: rgba(0,0,0,0);
+  border: solid 3px black;
+}
+section.border button:hover,
+section.border button.hover {
+  cursor: pointer;
+  border-color: green;
+  color: green;
+}
+section.border button:active,
+section.border button.active {
+  border-color: green;
+  color: green;
+}
