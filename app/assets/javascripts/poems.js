@@ -4,7 +4,6 @@ $(document).ready(function() {
   function waitForPoem() {
     if ($("#poems")) {
       init();
-      poemCount += 1;
     } else {
       waitForPoem();
     }
@@ -13,6 +12,7 @@ $(document).ready(function() {
   function init() {
     text = $("#poems").data("poems")[poemCount];
     if (text) {
+      poemCount += 1;
       letters = text.split("");
       count = 0;
       score = 0;
